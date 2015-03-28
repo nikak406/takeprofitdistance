@@ -2,9 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.File;
 
-/**
- * Created by eugene on 3/28/2015.
- */
 abstract class AbstractPanel extends JPanel implements Constants{
     Data DB;
 
@@ -59,7 +56,7 @@ abstract class AbstractPanel extends JPanel implements Constants{
     }
 
     void selectFiles(){
-        JFileChooser selectFileBox = new JFileChooser("C:\\Users\\eugene\\Google Drive\\Forex\\Results");
+        JFileChooser selectFileBox = new JFileChooser(filesPath);
         selectFileBox.setMultiSelectionEnabled(true);
         int returnValue = selectFileBox.showOpenDialog(null);
         if (returnValue == JFileChooser.APPROVE_OPTION) {

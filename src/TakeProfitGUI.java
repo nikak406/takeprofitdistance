@@ -41,7 +41,7 @@ public class TakeProfitGUI implements Constants {
         MultPanel(){
             super("TP:");
             for(int i = 0; i<=22; i++) multBox.addItem("" + (double) i / 10);
-            multBox.setSelectedItem("" + DB.takeProfitDisance);
+            multBox.setSelectedItem("" + DB.takeProfitDistance);
 
             selectFile.addActionListener(actionEvent -> {
                 selectFiles();
