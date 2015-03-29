@@ -2,6 +2,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.stream.DoubleStream;
 
@@ -18,9 +19,7 @@ public class Data implements Constants {
         if (multiplicator != null ) this.multiplicator = multiplicator;
         if (takeProfitDistance != null ) this.takeProfitDistance = takeProfitDistance;
         String[] paths = new String[files.length];
-        for(int i=0; i<files.length; i++){
-            paths[i] = files[i].getPath();
-        }
+        Arrays.setAll(paths, i -> files[i].getPath());
         String str = readFiles(paths);
         String[] lines = str.split(System.getProperty("line.separator"));
         Scanner scanner;
